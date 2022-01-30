@@ -3,9 +3,11 @@ export function getCustomProperty(elem, prop){
 }
 
 export function setCustomProperty(elem, prop, value){
+    elem.style.setProperty(prop,value)
 
 }
 
-export function incrementCustomProperty(){
 
+export function incrementCustomProperty(elem, prop, inc){
+    setCustomProperty(elem, prop , getCustomProperty(elem, prop) + inc)
 }
